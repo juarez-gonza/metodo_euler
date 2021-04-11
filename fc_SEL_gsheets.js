@@ -370,9 +370,8 @@ function NINFINITO(m)
   for (i = 0; i < m.length; i++) {
 
     sum = 0;
-    for (j = 0; j < m[i].length; j++) {
+    for (j = 0; j < m[i].length; j++)
       sum += Math.abs(m[i][j]);
-    }
 
     if (sum > max)
       max = sum;
@@ -395,9 +394,8 @@ function NUNO(m)
   for (i = 0; i < m.length; i++) {
 
     sum = 0;
-    for (j = 0; j < m[i].length; j++) {
+    for (j = 0; j < m[i].length; j++)
       sum += Math.abs(m[j][i]);
-    }
 
     if (sum > max)
       max = sum;
