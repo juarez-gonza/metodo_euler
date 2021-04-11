@@ -6,7 +6,10 @@
 
 /*
  * DOCUMENTACION PARA USAR DESDE Google Sheet
- * Las funciones expuestas son:
+ * En el menú, ir a Herramientas -> Editor de Secuencias de Comandos (logo "<>")
+ * Se abre Apps Script. Pegar este código ahí.
+ * Ahora ese Google Sheet asociado.
+ * Dispone de las sig. funciones:
  *    - JACOBI(m, b, n) -> calcula n iteraciones del método de Jacobi
  *    - JACOBIP(m, b, p) -> calcula por método de Jacobi hasta la precisión p
  *    - GSEID(m, b, n) -> calcula n iteraciones del método de Gauss-Seidel
