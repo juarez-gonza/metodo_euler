@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-if [ !"$(docker image ls | grep 'metodo_euler')" ]
+if [ "$(docker image ls | grep metodo_euler)" ]
 then
+	echo "Imagen metodo_euler encontrada"
+else
 	docker build --tag metodo_euler .
 fi
 
