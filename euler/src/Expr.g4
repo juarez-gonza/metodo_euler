@@ -3,8 +3,7 @@ grammar Expr;
 prog:	stat+
 	;
 
-stat:	expr NL
-	| NL
+stat:	expr
 	;
 
 expr:	expr op=('*'|'/') expr		# muldiv
