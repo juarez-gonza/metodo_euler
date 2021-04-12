@@ -1,9 +1,24 @@
 grammar Expr;		
-prog:	(expr NEWLINE)* ;
-expr:	expr ('*'|'/') expr
-    |	expr ('+'|'-') expr
-    |	INT
-    |	'(' expr ')'
-    ;
-NEWLINE : [\r\n]+ ;
-INT     : [0-9]+ ;
+
+prog:	stat+
+	;
+
+stat:	expr NL
+	| NL
+	;
+
+expr:	expr op=('*'|'/') expr		# muldiv
+	| expr op=('+'|'-') expr	# addsub
+	| INT				# int
+	| ID				# id
+	| '(' expr ')'			# parens
+	;
+
+MUL: '*';
+DIV: '/';
+ADD: '+';
+SUB: '-';
+ID : [a-zA-Z]+;
+INT: [0-9]+ ;
+NL: [\r\n]+ ;
+WS: [ \t]+ -> skip ;
