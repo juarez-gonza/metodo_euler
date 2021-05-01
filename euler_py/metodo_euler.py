@@ -1,10 +1,13 @@
 import sympy
+import math
 
 class Function():
     def __init__(self, str_repr):
         self.str_repr = str_repr
         self.fc_expr = sympy.parse_expr(str_repr)
         self.varmap = {}
+        self.varmap_put("e", math.e)
+        self.varmap_put("pi", math.pi)
 
     def evaluate(self):
         value = self.fc_expr.subs(self.varmap)
@@ -42,6 +45,7 @@ class M_Euler():
 
         for i in range(self.n):
             iter_val = fc.evaluate()
+            print(iter_val)
             self.yi = self.y0 + h * iter_val
 
             self.report_iter(i, iter_val)
