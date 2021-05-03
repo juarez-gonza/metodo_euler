@@ -1,4 +1,6 @@
 Materia: Análisis Numérico.
+Alumno: Gonzalo Juarez
+
 	Método de euler.
 
 	Pre-requisitos:
